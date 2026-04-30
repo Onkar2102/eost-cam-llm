@@ -1,6 +1,4 @@
-# Evolving Prompts for Toxicity Search in Large Language Models
-
-This repository implements a black-box evolutionary framework for systematically testing Large Language Model (LLM) safety through LLM-guided prompt evolution to elicit toxic responses.
+# ToxSearch: Evolving Prompts for Toxicity Search in Large Language Models
 
 ## Abstract
 
@@ -181,11 +179,20 @@ Complete reference table:
 If you use this framework in your research, please cite:
 
 ```bibtex
-@article{evolving_prompts_toxicity_2025,
-  title={Evolving Prompts for Toxicity Search in Large Language Models},
-  author={...},
-  journal={...},
-  year={2025}
+@InProceedings{10.1007/978-3-032-23607-4_9,
+author="Shelar, Onkar
+and Desell, Travis",
+editor="Garc{\'i}a-S{\'a}nchez, Pablo
+and D{\'i}az {\'A}lvarez, Josefa
+and Murphy, Aidan",
+title="ToxSearch: Evolving Prompts for Toxicity Search in Large Language Models",
+booktitle="Applications of Evolutionary Computation",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="134--149",
+abstract="Large Language Models remain vulnerable to adversarial prompts that elicit toxic content even after safety alignment. We present ToxSearch, a black-box evolutionary framework that tests model safety by evolving prompts in a synchronous, steady-state {\$}{\$}({\backslash}mu +{\backslash}lambda ){\$}{\$}($\mu$+$\lambda$)loop. The system employs a diverse operator suite, including lexical substitutions, negation, back-translation, paraphrasing, and two semantic crossover operators, while a moderation oracle provides fitness guidance. Operator-level analysis reveals significant heterogeneity in performance, as lexical substitutions offer the best yield--variance trade-off, semantic-similarity crossover acts as a precise low-throughput inserter, and global rewrites exhibit high variance with elevated refusal costs. Using elite prompts evolved on LLaMA 3.1 8B, we observe practically meaningful but attenuated cross-model transfer. Toxicity drops by roughly half on most targets, with smaller LLaMA 3.2 variants showing the strongest resistance and some cross-architecture models (e.g., Qwen and Mistral) retaining higher toxicity. Overall, our results indicate that small, controllable perturbations serve as reliable vehicles for systematic red-teaming, while defenses should anticipate cross-model prompt reuse rather than focusing solely on single-model hardening.",
+isbn="978-3-032-23607-4"
 }
 ``` -->
 
